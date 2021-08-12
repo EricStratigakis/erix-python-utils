@@ -4,20 +4,20 @@ This is a project that has utils that I like using, and want to make a package
 
 ## Installation
 
-'''python
+```python
 pip install erix-python-utils
-'''
+```
 
-## Usage
+# Usage
 
-# Gerate "helloworld!"
-
+## Gerate "helloworld!"
+from helloworld import helloworld
 helloworld()
 
-# Developing erix-python-packages
+## Developing erix-python-packages
 
 To install, along with the tools you need and run tests, run the following in you virtualenv
 
-'''bash
+```bash
 pip install -e .[dev]
-'''
+```
