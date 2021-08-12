@@ -13,3 +13,11 @@ pip install erix-python-utils
 # Gerate "helloworld!"
 
 helloworld()
+
+# Developing erix-python-packages
+
+To install, along with the tools you need and run tests, run the following in you virtualenv
+
+'''bash
+pip install -e .[dev]
+'''
