@@ -5,11 +5,11 @@ with open("README.md", "r") as fh:
 
 setup(
     name="erix-python-utils",
-    version="0.0.1",
+    version="0.0.3",
     author="Eric Stratigakis",
     author_email="enstrati@uwaterloo.ca",
     description="All of my utilities and tools in one place",
-    py_modules=["helloworld"],
+    py_modules=["homebrew"],
     package_dir={"":"src"},
     classifiers=[
         "Development Status :: 1 - Planning",
