@@ -1,2 +1,2 @@
-#!/bin/bash
-twine upload dist/*
+#bin/bash#!
+twine upload dist/* 
