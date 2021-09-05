@@ -1,17 +1,14 @@
 version: 2.1
 
-orbs:
-  python: circleci/python@1.4.0
-
 jobs:
-  build-and-test:
-    executor: python/default
+  test:
+    docker:
+      - image: cimg/python:3.9.7
     steps:
-      - checkout # get the code from the main branch
-      - python/install-deps # pip install based on requiremnts.txt
-      - python/test
+      - checkout
+      - run: python --version
 
 workflows:
-  main:
+  test-deploy:
     jobs:
-      - build-and-test
+      - test
