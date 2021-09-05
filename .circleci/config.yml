@@ -4,14 +4,14 @@ orbs:
   python: circleci/python@1.4.0
 
 jobs:
-  build-and-test:
+  build:
     executor: python/default
     steps:
-      - checkout
-      - python/install-deps
+      - checkout # get the code from the main branch
+      - python/install-deps # pip install based on requiremnts.txt
       - python/test
 
-workflows:
+workflow:
   main:
     jobs:
-      - build-and-test
+      - test_src_code
