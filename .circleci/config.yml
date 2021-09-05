@@ -4,7 +4,7 @@ orbs:
   python: circleci/python@1.4.0
 
 jobs:
-  build:
+  build-and-test:
     executor: python/default
     steps:
       - checkout # get the code from the main branch
@@ -14,4 +14,4 @@ jobs:
 workflow:
   main:
     jobs:
-      - test_src_code
+      - build-and-test
