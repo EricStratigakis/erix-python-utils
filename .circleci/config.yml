@@ -7,6 +7,12 @@ jobs:
     steps:
       - checkout
       - run: python --version
+      - run:
+        name: Install dependencies
+        command: pip install -r requirements.txt
+      -run:
+        name: Run Tests
+        command: python -m unittest
 
 workflows:
   test-deploy:
