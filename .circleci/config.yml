@@ -4,16 +4,21 @@ orbs:
   python: circleci/python@1.4.0
 
 jobs:
-  publish:
+  pypi_publish:
     executor: python/default
     steps:
-      - checkout
-      - python/dist
-      - run: pip install twine && twine upload dist/* -u {PYPI_USERNMAE} -p {PYPI_PASSWORD} --verbose
+      - checkout # checkout source code to working directory
+      - run:
+          command: | # create whl, install twine and publish to PyPI
+            python setup.py sdist bdist_wheel
+            pip install twine
+            twine upload dist/*
 
 workflows:
   main:
     jobs:
       - python/test:
           test-tool: unittest
-      - publish
+      - pypi_publish:
+          requires:
+            - python/test
