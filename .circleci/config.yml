@@ -11,8 +11,8 @@ jobs:
       - run:
           command: | # create whl, install twine and publish to PyPI
             python setup.py sdist bdist_wheel
-            pip install twine
-            twine upload  -u $PYPI_USERNAME -p $PYPI_PASSWORD dist/*
+            pip install twine wheel
+            twine upload -u $PYPI_USERNAME -p $PYPI_PASSWORD dist/*
 
 workflows:
   main:
