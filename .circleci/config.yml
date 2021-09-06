@@ -16,6 +16,7 @@ jobs:
   build_deploy:
     docker:
       - image: cimg/python:3.9.7
+    steps:
       - checkout
       - run:
           name: Install wheel and twine
