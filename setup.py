@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="erix-python-utils",
-    version="0.0.3",
+    version="0.0.10",
     author="Eric Stratigakis",
     author_email="enstrati@uwaterloo.ca",
     description="All of my utilities and tools in one place",

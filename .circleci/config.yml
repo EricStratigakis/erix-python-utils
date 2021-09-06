@@ -13,7 +13,21 @@ jobs:
           name: Run Tests
           command: python -m unittest
 
+  build_deploy:
+    docker:
+      - image: cimg/python:3.9.7
+      - checkout
+      - run:
+          name: Install wheel and twine
+          command: pip install wheel twine
+      - run:
+          name: build
+          command: ./build.sh
+      - run:
+          name: deploy
+          command: ./deploy.sh
+
 workflows:
-  test-deploy:
+  test-deploy-if-success:
     jobs:
       - test
