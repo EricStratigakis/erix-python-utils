@@ -20,7 +20,7 @@ workflows:
     jobs:
       # - python/test:
       #     test-tool: unittest
-      - pypi_publish:
-          # requires:
-          # - python/test
+      pypi_publish
+      # requires:
+      # - python/test
 #
