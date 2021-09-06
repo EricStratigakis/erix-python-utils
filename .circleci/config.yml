@@ -15,6 +15,5 @@ workflows:
   main:
     jobs:
       - python/test:
-          args: "--dev"
           test-tool: unittest
       - publish
