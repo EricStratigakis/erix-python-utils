@@ -2,3 +2,19 @@ version: 2.1
 
 orbs:
   python: circleci/python@1.4.0
+
+jobs:
+  publish:
+    executor: python/default
+    steps:
+      - checkout
+      - python/dist
+      - run: pip install twine && twine upload
+
+workflows:
+  main:
+    jobs:
+      - python/test:
+          args: "--dev"
+          test-tool: unittest
+      - publish
