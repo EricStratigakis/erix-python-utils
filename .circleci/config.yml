@@ -9,7 +9,7 @@ jobs:
     steps:
       - checkout
       - python/dist
-      - run: pip install twine && twine upload dist/* -u {PYPI_USERNMAE} -p {PYPI_PASSWORD}
+      - run: pip install twine && twine upload dist/* -u {PYPI_USERNMAE} -p {PYPI_PASSWORD} --verbose
 
 workflows:
   main:
