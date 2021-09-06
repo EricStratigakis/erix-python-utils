@@ -11,8 +11,6 @@ class HomeBrewTest(TestCase):
         self.assertTrue('FOO'.isupper())
         self.assertFalse('Foo'.isupper())
     
-    def test_force_fail(self):
-        assert 2 == 3
         
 if __name__ == "__main__":
     main()
