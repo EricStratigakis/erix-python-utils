@@ -9,8 +9,7 @@ jobs:
     steps:
       - checkout
       - python/dist
-      - run: python setup.py sdist bdist_wheel
-      - run: pip install twine && twine upload
+      - run: pip install twine && twine upload dist/*
 
 workflows:
   main:
