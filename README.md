@@ -10,7 +10,8 @@ pip install erix-python-utils
 
 # Usage
 
-## Gerate "helloworld!"
+## homebrew.py
+
 from helloworld import helloworld
 helloworld()
 

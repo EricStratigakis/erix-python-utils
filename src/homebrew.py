@@ -2,7 +2,11 @@ from logging import getLogger, StreamHandler
 from sys import stdout
 from traceback import format_list, extract_tb
 from smtplib import SMTP
+from json import loads, dumps
 
+def prettyJSON(d, indent=2, sort_keys=True):
+    parsed = d if isinstance(d, dict) else loads(d)
+    return dumps(parsed, indent=indent, sort_keys=sort_keys)
 def initLogger(logLevelStr="CRITICAL"):
     '''returns a logging object set to a loglevel'''
     logLevelMap= {
